@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { logo, menu, close } from "../assets";
+import { menu, close } from "../assets";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { navLinks } from "../constants";
 import { styles } from "../styles";
@@ -46,13 +46,20 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 group"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <div className="relative">
+            <div className="absolute inset-0 bg-[#00d9ff] blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-full"></div>
+            <img 
+              src="/Logo1.png" 
+              alt="logo" 
+              className="w-9 h-9 object-contain relative z-10 drop-shadow-[0_0_8px_rgba(0,217,255,0.6)] group-hover:drop-shadow-[0_0_15px_rgba(57,255,20,0.8)] transition-all duration-300 group-hover:scale-110" 
+            />
+          </div>
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Marugani Reddi Sekhar&nbsp;
             <span className="lg:block hidden">| Developer</span>
