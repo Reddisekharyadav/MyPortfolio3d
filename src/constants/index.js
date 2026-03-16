@@ -12,6 +12,7 @@ import {
   mongodb,
   git,
   docker,
+  meta,
   starbucks,
   java,
   python,
