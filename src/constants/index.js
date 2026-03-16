@@ -12,19 +12,16 @@ import {
   mongodb,
   git,
   docker,
-  meta,
   starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   java,
   python,
   nextjs,
   prisma,
   mysql,
   firebase,
+  githubRepoImage,
+  zadenorLogo,
+  appnexusLogo,
 } from "../assets";
 
 export const navLinks = [
@@ -35,6 +32,14 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "publications",
+    title: "Publications",
+  },
+  {
+    id: "certifications",
+    title: "Certifications",
   },
   {
     id: "contact",
@@ -81,48 +86,36 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Junior Developer (Freelance)",
+    company_name: "ZadeNor AI Remote",
+    icon: zadenorLogo,
+    iconBg: "#E6DEDD",
+    date: "Feb 2024 – Feb 2026",
+    points: [
+      "Engineered an Electron-based financial database system with secure data handling and modular system design.",
+      "Designed and deployed a Docker-based Redis-PostgreSQL orchestration setup, improving data retrieval performance and enabling automated deployment pipelines.",
+    ],
+  },
+  {
     title: "Software Developer",
-    company_name: "AppNexus Pvt. Ltd.",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Dec 2024 – Present",
+    company_name: "AppNexus Pvt. Ltd. Remote",
+    icon: appnexusLogo,
+    iconBg: "#383E56",
+    date: "Dec 2024 – Jun 2025",
     points: [
-      "Built full-stack app with Next.js and Prisma.",
-      "Improved backend API efficiency and added reusable UI components.",
-      "Followed Git-based version control and Agile process.",
+      "Developed scalable full-stack applications using Next.js and Prisma ORM, optimizing backend queries and improving API response efficiency.",
+      "Implemented structured SDLC practices and version control workflows to enhance maintainability and deployment reliability.",
     ],
   },
   {
-    title: "Full Stack Web Developer Intern",
-    company_name: "Prayana Electric",
+    title: "Full Stack Developer Intern",
+    company_name: "Prayana Electric - VIT-AP IIEC Incubated Startup, Amaravati, India",
     icon: starbucks,
-    iconBg: "#383E56",
-    date: "Nov 2024 – Present",
-    points: [
-      "Developed admin dashboard, integrated backend APIs.",
-      "Improved frontend UX and deployed updates weekly.",
-    ],
-  },
-  {
-    title: "Technical Lead",
-    company_name: "Pregrad",
-    icon: meta,
     iconBg: "#E6DEDD",
-    date: "Feb 2025 – Present",
+    date: "Nov 2024 – Jun 2025",
     points: [
-      "Managed small development team.",
-      "Guided interns on feature design and task management.",
-    ],
-  },
-  {
-    title: "Java Intern",
-    company_name: "InternPe",
-    icon: meta,
-    iconBg: "#383E56",
-    date: "Apr – May 2024",
-    points: [
-      "Worked on basic Java applications.",
-      "Collaborated on peer-reviewed software modules.",
+      "Built secure REST APIs and admin dashboards, integrating database management and authentication mechanisms.",
+      "Collaborated in Agile sprints, contributing to feature planning, debugging, and performance optimization.",
     ],
   },
 ];
@@ -162,40 +155,187 @@ const activities = [
 
 const certifications = [
   {
-    name: "Microsoft Azure Fundamentals",
-    issuer: "Microsoft",
+    name: "MATLAB Onramp",
+    issuer: "MathWorks Academy",
     date: "2024",
-    description: "Comprehensive understanding of cloud services and Azure platform fundamentals.",
+    description: "Completed foundational MATLAB workflows and scripting fundamentals.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0568e052-20a2-49d0-a0ab-8ed16df3ef2e&",
+      },
+    ],
   },
   {
-    name: "Hacktoberfest 2024",
-    issuer: "DigitalOcean",
+    name: "Image Processing Onramp",
+    issuer: "MathWorks Academy",
     date: "2024",
-    description: "Successfully contributed to open-source projects during Hacktoberfest.",
+    description: "Covered image enhancement and processing techniques in MATLAB.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=2814a321-5c77-499b-9a44-4f77fa859eba&",
+      },
+    ],
   },
   {
-    name: "Python Essential Training",
+    name: "JavaScript Essentials",
+    issuer: "Cisco Networking Academy",
+    date: "2024",
+    description: "Validated JavaScript fundamentals for modern web development.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://www.credly.com/badges/63b001cf-f1be-46c2-8d81-4d23e2951fe9/linked_in_profile",
+      },
+    ],
+  },
+  {
+    name: "Programming with Python Professional Certificate",
+    issuer: "OpenEDG Python Institute",
+    date: "Jan 2024",
+    description: "Completed professional-level Python curriculum and practical exercises.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://www.linkedin.com/learning/certificates/9c96bd77c604125bc0ce4bced576bfc5c22b98aa36ca5de1ef39329e0045e044",
+      },
+    ],
+  },
+  {
+    name: "Python Practice: Object-Oriented Programming",
     issuer: "LinkedIn Learning",
     date: "2024",
-    description: "Mastered Python programming fundamentals and best practices.",
+    description: "Focused on applied OOP patterns and object modeling in Python.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://www.linkedin.com/learning/certificates/a466c8ca6c98b6388a28f850019d8e8233b8f5897870e5ac12cd3b0802d6c066",
+      },
+    ],
   },
   {
-    name: "Software Project Management",
-    issuer: "Coursera",
+    name: "Python Object-Oriented Programming",
+    issuer: "LinkedIn Learning",
     date: "2024",
-    description: "Learned agile methodologies and project management techniques.",
+    description: "Covered class design, inheritance, abstraction, and reusable components.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://www.linkedin.com/learning/certificates/e11c8e78f193abd12e5a9eae236bc9f1a9ee91b4e31d781217152f1e8ba5fea4",
+      },
+    ],
   },
   {
-    name: "Code Crunch",
-    issuer: "VIT-AP",
-    date: "2024",
-    description: "Participated in competitive coding competition.",
+    name: "Raspberry Pi Essential Training",
+    issuer: "LinkedIn Learning",
+    date: "Jan 2024",
+    description: "Practical training on Raspberry Pi setup and device-oriented workflows.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://www.linkedin.com/learning/certificates/c0ac20d9fb31411196d253d1e49a2052e6e807f84382ed700eae0aff8e892d79?trk=share_certificate",
+      },
+    ],
+  },
+];
+
+const publications = [
+  {
+    title: "Minimizing Return Rates in Online Fashion through Personalized Avatar-Based Fitting",
+    venue: "IEEE SCIS 2025 (Accepted)",
+    description:
+      "Research focused on computer vision pipelines, image processing, and performance-aware deployment for personalized avatar-based virtual try-on systems.",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/Reddisekharyadav/Personalized-Avatar-Fitting",
+      },
+    ],
   },
   {
-    name: "GeeksforGeeks Core Member Certificate",
-    issuer: "GeeksforGeeks VIT-AP Chapter",
-    date: "2024",
-    description: "Recognition for active participation and technical mentorship.",
+    title: "Speech Emotion Recognition using Hybrid CNN-BiLSTM and Attention Mechanism",
+    venue: "IEEE IATMSI 2026 (Accepted)",
+    description:
+      "Designed and evaluated a hybrid deep learning approach for robust speech emotion recognition in practical settings.",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/Reddisekharyadav/Enhanced-Speech-Emotion-Recognition-SER-System",
+      },
+      {
+        label: "Live Demo",
+        url: "https://mrs-emotiondetector-ai.streamlit.app/",
+      },
+    ],
+  },
+];
+
+const technicalActivities = [
+  {
+    title: "Sea Creature Classification using Deep Learning",
+    description:
+      "Presented a poster at a National Conference (Acharya N.G. Ranga Agricultural University); abstract published.",
+    links: [
+      {
+        label: "Abstract",
+        url: "https://www.researchgate.net/publication/397179361_ACHARYA_NG_RANGA_AGRICULTURAL_UNIVERSITY_GUIDELINES_ON_CONDUCT_DISCIPLINE_AND_WELFARE_MEASURES_FOR_STUDENTS_ACHARYA_NG_RANGA_AGRICULTURAL_UNIVERSITY",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/Reddisekharyadav/Sea-Creature-Classification",
+      },
+    ],
+  },
+  {
+    title: "Android X Gemini Hackathon 2025",
+    description: "Participated and delivered solution concepts under hackathon constraints.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://credsverse.com/credentials/0cc975d5-11fd-4803-823c-e637cee08462",
+      },
+    ],
+  },
+  {
+    title: "GFG VIT-AP Hacktoberfest",
+    description: "Contributed through open-source activities and collaboration tasks.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://credsverse.com/credentials/6e3ffb2d-2c33-400c-9646-de942780e260",
+      },
+    ],
+  },
+  {
+    title: "Unstop E-Commerce Challenge",
+    description: "Competed in product and strategy challenge tracks for e-commerce scenarios.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://unstop.com/certificate-preview/80fd3c80-75bf-4946-a489-c1f306c270cb?utm_campaign=",
+      },
+    ],
+  },
+  {
+    title: "GFG Code Crunch",
+    description: "Participated in coding challenge rounds and algorithmic problem solving.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://certificate.givemycertificate.com/c/983a75b8-45ee-4ae1-acd1-c4b446fbdef1",
+      },
+    ],
+  },
+  {
+    title: "Microsoft Learn - Git/GitHub Workshop",
+    description: "Completed workshop on collaborative version control workflows.",
+    links: [
+      {
+        label: "Certificate",
+        url: "https://certificate.givemycertificate.com/c/c06363e8-525e-45a5-8762-8120d50e6e23",
+      },
+    ],
   },
 ];
 
@@ -287,6 +427,64 @@ const projects = [
     image: "/springboot.png",
     source_code_link: "https://github.com/Reddisekharyadav/AI-Shopping-E-Commerce-Application",
   },
+  {
+    name: "ParkPlaze - Smart Parking Platform",
+    description:
+      "Designed a scalable location-based booking system with centralized database management and RESTful APIs, ensuring secure authentication and optimized slot allocation logic.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "rest-api", color: "green-text-gradient" },
+      { name: "database", color: "pink-text-gradient" },
+    ],
+    image: githubRepoImage,
+    source_code_link: "https://github.com/Reddisekharyadav/ParkPlaze",
+    live_url: "https://parkplaza-main.vercel.app/",
+  },
+  {
+    name: "NextGenKart - 3D Shopping Web Application",
+    description:
+      "Built a full-stack e-commerce system using Spring Boot and MySQL with modular backend architecture, dynamic cart management, and secure transaction handling.",
+    tags: [
+      { name: "spring-boot", color: "blue-text-gradient" },
+      { name: "mysql", color: "green-text-gradient" },
+      { name: "full-stack", color: "pink-text-gradient" },
+    ],
+    image: githubRepoImage,
+    source_code_link: "https://github.com/Reddisekharyadav/AI-Shopping-E-Commerce-Application",
+  },
+  {
+    name: "GitHub Documentation Generator",
+    description:
+      "Developed an automated Python-based documentation generator to parse repositories and generate structured technical documentation, improving development workflow efficiency.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "automation", color: "green-text-gradient" },
+      { name: "github", color: "pink-text-gradient" },
+    ],
+    image: githubRepoImage,
+    source_code_link: "https://github.com/Reddisekharyadav",
+  },
+  {
+    name: "Wristband IoT Health Monitoring System",
+    description:
+      "ESP32 ECG prototype for real-time health monitoring data with preprocessing; addressed latency, memory limits, and signal noise handling in a real-time pipeline.",
+    tags: [
+      { name: "esp32", color: "blue-text-gradient" },
+      { name: "iot", color: "green-text-gradient" },
+      { name: "real-time", color: "pink-text-gradient" },
+    ],
+    image: githubRepoImage,
+    source_code_link: "https://github.com/Reddisekharyadav",
+  },
 ];
 
-export { services, technologies, experiences, activities, certifications, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  activities,
+  certifications,
+  publications,
+  technicalActivities,
+  projects,
+};

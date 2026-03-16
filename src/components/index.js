@@ -9,6 +9,7 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Certifications from "./Certifications";
+import Publications from "./Publications";
 
 
 export {
@@ -22,6 +23,7 @@ export {
   Contact,
   CanvasLoader,
   Certifications,
+  Publications,
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 

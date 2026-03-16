@@ -6,7 +6,7 @@ import MatrixRain from "./components/MatrixRain";
 import CustomCursor from "./components/CustomCursor";
 import ClickRipple from "./components/ClickRipple";
 import FloatingCode from "./components/FloatingCode";
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Certifications, StarsCanvas } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Publications, Certifications, StarsCanvas } from "./components";
 
 const MainContent = () => (
   <div className='relative z-0 bg-primary'>
@@ -31,6 +31,9 @@ const MainContent = () => (
         </div>
         <div className='relative z-20'>
           <Works />
+        </div>
+        <div className='relative z-20'>
+          <Publications />
         </div>
         <div className='relative z-20'>
           <Certifications />

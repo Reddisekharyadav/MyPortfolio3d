@@ -38,6 +38,9 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import zadenorLogo from "./zadenor_global_logo.jpg";
+import appnexusLogo from "./appenexus_logo.jpg";
+import githubRepoImage from "./GitHub Repo Intellig.png";
 
 export {
   logo,
@@ -77,4 +80,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  zadenorLogo,
+  appnexusLogo,
+  githubRepoImage,
 };
