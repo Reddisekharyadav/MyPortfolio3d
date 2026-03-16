@@ -118,6 +118,28 @@ const experiences = [
       "Collaborated in Agile sprints, contributing to feature planning, debugging, and performance optimization.",
     ],
   },
+  {
+    title: "Technical Lead",
+    company_name: "Pregrad",
+    icon: meta,
+    iconBg: "#E6DEDD",
+    date: "Feb 2025 – Present",
+    points: [
+      "Managed small development team.",
+      "Guided interns on feature design and task management.",
+    ],
+  },
+  {
+    title: "Java Intern",
+    company_name: "InternPe",
+    icon: meta,
+    iconBg: "#383E56",
+    date: "Apr – May 2024",
+    points: [
+      "Worked on basic Java applications.",
+      "Collaborated on peer-reviewed software modules.", 
+    ],
+  },
 ];
 
 const activities = [
@@ -390,19 +412,19 @@ const projects = [
     image: "/fire and gas.png",
     source_code_link: "https://github.com/Reddisekharyadav/Fire-Gas-Detection-System",
   },
-  {
-    name: "ParkPlaze",
-    description:
-      "Full-stack parking slot booking platform offering prebooking, location filtering, and additional services like fuel/cleaning. Built with Next.js, React.js, MongoDB cloud and Render deployment.",
-    tags: [
-      { name: "nextjs", color: "blue-text-gradient" },
-      { name: "mongodb", color: "green-text-gradient" },
-      { name: "react", color: "pink-text-gradient" },
-    ],
-    image: "/parkplaza.png",
-    source_code_link: "https://github.com/Reddisekharyadav/ParkPlaze",
-    live_url: "https://parkplaza-main.vercel.app/",
-  },
+  // {
+  //   name: "ParkPlaze",
+  //   description:
+  //     "Full-stack parking slot booking platform offering prebooking, location filtering, and additional services like fuel/cleaning. Built with Next.js, React.js, MongoDB cloud and Render deployment.",
+  //   tags: [
+  //     { name: "nextjs", color: "blue-text-gradient" },
+  //     { name: "mongodb", color: "green-text-gradient" },
+  //     { name: "react", color: "pink-text-gradient" },
+  //   ],
+  //   image: "/parkplaza.png",
+  //   source_code_link: "https://github.com/Reddisekharyadav/ParkPlaze",
+  //   live_url: "https://parkplaza-main.vercel.app/",
+  // },
   {
     name: "Enhanced Speech Emotion Recognition",
     description:
@@ -415,18 +437,18 @@ const projects = [
     image: "/ser.png",
     source_code_link: "https://github.com/Reddisekharyadav/Enhanced-Speech-Emotion-Recognition",
   },
-  {
-    name: "AI-Shopping",
-    description:
-      "AI-powered automated retail stores (AIPARS) leveraging artificial intelligence to enhance the shopping experience with NLP, Machine Learning, React frontend, and cloud services.",
-    tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "ai", color: "green-text-gradient" },
-      { name: "mongodb", color: "pink-text-gradient" },
-    ],
-    image: "/springboot.png",
-    source_code_link: "https://github.com/Reddisekharyadav/AI-Shopping-E-Commerce-Application",
-  },
+  // {
+  //   name: "AI-Shopping",
+  //   description:
+  //     "AI-powered automated retail stores (AIPARS) leveraging artificial intelligence to enhance the shopping experience with NLP, Machine Learning, React frontend, and cloud services.",
+  //   tags: [
+  //     { name: "react", color: "blue-text-gradient" },
+  //     { name: "ai", color: "green-text-gradient" },
+  //     { name: "mongodb", color: "pink-text-gradient" },
+  //   ],
+  //   image: "/springboot.png",
+  //   source_code_link: "https://github.com/Reddisekharyadav/AI-Shopping-E-Commerce-Application",
+  // },
   {
     name: "ParkPlaze - Smart Parking Platform",
     description:
@@ -436,8 +458,8 @@ const projects = [
       { name: "rest-api", color: "green-text-gradient" },
       { name: "database", color: "pink-text-gradient" },
     ],
-    image: githubRepoImage,
-    source_code_link: "https://github.com/Reddisekharyadav/ParkPlaze",
+    image: "/parkplaza.png",
+    source_code_link: "https://github.com/Reddisekharyadav/Smart-Parking-Management-System-fullstack-application",
     live_url: "https://parkplaza-main.vercel.app/",
   },
   {
@@ -449,7 +471,7 @@ const projects = [
       { name: "mysql", color: "green-text-gradient" },
       { name: "full-stack", color: "pink-text-gradient" },
     ],
-    image: githubRepoImage,
+    image: "/springboot.png",
     source_code_link: "https://github.com/Reddisekharyadav/AI-Shopping-E-Commerce-Application",
   },
   {
@@ -473,7 +495,7 @@ const projects = [
       { name: "iot", color: "green-text-gradient" },
       { name: "real-time", color: "pink-text-gradient" },
     ],
-    image: githubRepoImage,
+    image: "/ser.png",
     source_code_link: "https://github.com/Reddisekharyadav",
   },
 ];
