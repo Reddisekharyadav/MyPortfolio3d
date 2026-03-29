@@ -374,6 +374,7 @@ const projects = [
     ],
     image: "/compresser.png",
     source_code_link: "https://github.com/Reddisekharyadav/TroubleShooters-Compressor-Toolkit",
+    live_url: "https://troubleshooters-compresser.vercel.app/",
   },
   {
     name: "My AI Assistant",
