@@ -5,6 +5,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { navLinks } from "../constants";
 import { styles } from "../styles";
 
+const resumeUrl =
+  "https://drive.google.com/file/d/16V4QDPRPMYn4S7W-3P7IsAL4SUEw9kMa/view?usp=drive_link";
+
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -73,7 +76,7 @@ const Navbar = () => {
           </ul>
           <div className="hidden lg:flex gap-4 items-center">
             <a
-              href="/resume.pdf"
+              href={resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-[#00d9ff] text-black font-medium hover:bg-[#39ff14] transition"
@@ -116,7 +119,7 @@ const Navbar = () => {
               {renderNavLinks(true)}
               <li>
                 <a
-                  href="/resume.pdf"
+                  href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-secondary text-xl font-medium"

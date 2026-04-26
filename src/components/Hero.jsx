@@ -5,6 +5,9 @@ import Waves from "./canvas/Waves";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import useTypewriter from "../hooks/useTypewriter";
 
+const resumeUrl =
+  "https://drive.google.com/file/d/16V4QDPRPMYn4S7W-3P7IsAL4SUEw9kMa/view?usp=drive_link";
+
 const Hero = () => {
   const [screenSize, setScreenSize] = useState("desktop");
   const [scrollY, setScrollY] = useState(0);
@@ -109,7 +112,7 @@ const Hero = () => {
           className="mt-6 flex gap-4 flex-wrap justify-center z-[60] relative"
         >
           <a
-            href="/resume.pdf"
+            href={resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 rounded-lg bg-[#00d9ff] text-black font-medium hover:bg-[#39ff14] transition"
