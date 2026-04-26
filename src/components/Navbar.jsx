@@ -6,7 +6,7 @@ import { navLinks } from "../constants";
 import { styles } from "../styles";
 
 const resumeUrl =
-  "https://drive.google.com/file/d/16V4QDPRPMYn4S7W-3P7IsAL4SUEw9kMa/view?usp=drive_link";
+  "https://drive.google.com/file/d/1fJOuYfUMh11mZ_ToBSDJENsFfzehyXob/view?usp=sharing";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
