@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import useTypewriter from "../hooks/useTypewriter";
 
 const resumeUrl =
-  "https://drive.google.com/file/d/16V4QDPRPMYn4S7W-3P7IsAL4SUEw9kMa/view?usp=drive_link";
+  "https://drive.google.com/file/d/1fJOuYfUMh11mZ_ToBSDJENsFfzehyXob/view?usp=drive_link";
 
 const Hero = () => {
   const [screenSize, setScreenSize] = useState("desktop");
