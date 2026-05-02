@@ -138,7 +138,7 @@ const experiences = [
     date: "Apr – May 2024",
     points: [
       "Worked on basic Java applications.",
-      "Collaborated on peer-reviewed software modules.", 
+      "Collaborated on peer-reviewed software modules.",
     ],
   },
 ];
@@ -290,6 +290,10 @@ const publications = [
         label: "Live Demo",
         url: "https://mrs-emotiondetector-ai.streamlit.app/",
       },
+      {
+        label: "IEEE paper",
+        url: "https://ieeexplore.ieee.org/document/11466131",
+      },
     ],
   },
 ];
@@ -438,6 +442,7 @@ const projects = [
     ],
     image: "/ser.png",
     source_code_link: "https://github.com/Reddisekharyadav/Enhanced-Speech-Emotion-Recognition",
+    live_url: "https://mrs-emotiondetector-ai.streamlit.app/",
   },
   // {
   //   name: "AI-Shopping",
@@ -475,6 +480,7 @@ const projects = [
     ],
     image: "/springboot.png",
     source_code_link: "https://github.com/Reddisekharyadav/AI-Shopping-E-Commerce-Application",
+    live_url: "https://nextgenkart-app.onrender.com/mrs",
   },
   {
     name: "GitHub Documentation Generator",
@@ -487,6 +493,7 @@ const projects = [
     ],
     image: githubRepoImage,
     source_code_link: "https://github.com/Reddisekharyadav",
+    live_url: "https://mrm-gitdoc-generator.streamlit.app/",
   },
   {
     name: "Wristband IoT Health Monitoring System",
