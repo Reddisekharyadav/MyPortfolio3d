@@ -377,7 +377,7 @@ const projects = [
       { name: "javascript", color: "pink-text-gradient" },
     ],
     image: "/compresser.png",
-    source_code_link: "https://github.com/Reddisekharyadav/TroubleShooters-Compressor-Toolkit",
+    source_code_link: "https://github.com/Reddisekharyadav/Troubleshooters-Compresser-",
     live_url: "https://troubleshooters-compresser.vercel.app/",
   },
   {
@@ -416,7 +416,7 @@ const projects = [
       { name: "telegram", color: "pink-text-gradient" },
     ],
     image: "/fire and gas.png",
-    source_code_link: "https://github.com/Reddisekharyadav/Fire-Gas-Detection-System",
+    source_code_link: "https://github.com/Reddisekharyadav/Fire-and-gas-detection-in-home-automation",
   },
   // {
   //   name: "ParkPlaze",
@@ -441,7 +441,7 @@ const projects = [
       { name: "ai", color: "pink-text-gradient" },
     ],
     image: "/ser.png",
-    source_code_link: "https://github.com/Reddisekharyadav/Enhanced-Speech-Emotion-Recognition",
+    source_code_link: "https://github.com/Reddisekharyadav/Enhanced-Speech-Emotion-Recognition-SER-System",
     live_url: "https://mrs-emotiondetector-ai.streamlit.app/",
   },
   // {
@@ -492,7 +492,7 @@ const projects = [
       { name: "github", color: "pink-text-gradient" },
     ],
     image: githubRepoImage,
-    source_code_link: "https://github.com/Reddisekharyadav",
+    source_code_link: "https://github.com/Reddisekharyadav/Github-repo-intelligence-doc-generator",
     live_url: "https://mrm-gitdoc-generator.streamlit.app/",
   },
   {
@@ -505,7 +505,7 @@ const projects = [
       { name: "real-time", color: "pink-text-gradient" },
     ],
     image: "/ser.png",
-    source_code_link: "https://github.com/Reddisekharyadav",
+    source_code_link: "https://github.com/Reddisekharyadav/wristband-iot-health-monitor",
   },
 ];
 
