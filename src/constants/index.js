@@ -35,6 +35,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "publications",
     title: "Publications",
   },
@@ -266,10 +270,14 @@ const certifications = [
 const publications = [
   {
     title: "Minimizing Return Rates in Online Fashion through Personalized Avatar-Based Fitting",
-    venue: "IEEE SCIS 2025 (Accepted)",
+    venue: "SCIS 2025 — Springer (Sustainable Computing and Intelligent Systems)",
     description:
       "Research focused on computer vision pipelines, image processing, and performance-aware deployment for personalized avatar-based virtual try-on systems.",
     links: [
+      {
+        label: "Springer Paper",
+        url: "https://link.springer.com/chapter/10.1007/978-3-032-22914-4_2",
+      },
       {
         label: "GitHub",
         url: "https://github.com/Reddisekharyadav/Personalized-Avatar-Fitting",
@@ -278,7 +286,7 @@ const publications = [
   },
   {
     title: "Speech Emotion Recognition using Hybrid CNN-BiLSTM and Attention Mechanism",
-    venue: "IEEE IATMSI 2026 (Accepted)",
+    venue: "IEEE IATMSI 2026 (Published)",
     description:
       "Designed and evaluated a hybrid deep learning approach for robust speech emotion recognition in practical settings.",
     links: [
@@ -367,6 +375,7 @@ const technicalActivities = [
 ];
 
 const projects = [
+  // === Projects with existing images (first) ===
   {
     name: "TroubleShooters Compressor Toolkit",
     description:
@@ -392,7 +401,6 @@ const projects = [
     image: "/myasistent.png",
     source_code_link: "https://github.com/Reddisekharyadav/My-AI-Assistant",
   },
-
   {
     name: "MANACUSTOMCHOCO",
     description:
@@ -418,19 +426,6 @@ const projects = [
     image: "/fire and gas.png",
     source_code_link: "https://github.com/Reddisekharyadav/Fire-and-gas-detection-in-home-automation",
   },
-  // {
-  //   name: "ParkPlaze",
-  //   description:
-  //     "Full-stack parking slot booking platform offering prebooking, location filtering, and additional services like fuel/cleaning. Built with Next.js, React.js, MongoDB cloud and Render deployment.",
-  //   tags: [
-  //     { name: "nextjs", color: "blue-text-gradient" },
-  //     { name: "mongodb", color: "green-text-gradient" },
-  //     { name: "react", color: "pink-text-gradient" },
-  //   ],
-  //   image: "/parkplaza.png",
-  //   source_code_link: "https://github.com/Reddisekharyadav/ParkPlaze",
-  //   live_url: "https://parkplaza-main.vercel.app/",
-  // },
   {
     name: "Enhanced Speech Emotion Recognition",
     description:
@@ -444,18 +439,6 @@ const projects = [
     source_code_link: "https://github.com/Reddisekharyadav/Enhanced-Speech-Emotion-Recognition-SER-System",
     live_url: "https://mrs-emotiondetector-ai.streamlit.app/",
   },
-  // {
-  //   name: "AI-Shopping",
-  //   description:
-  //     "AI-powered automated retail stores (AIPARS) leveraging artificial intelligence to enhance the shopping experience with NLP, Machine Learning, React frontend, and cloud services.",
-  //   tags: [
-  //     { name: "react", color: "blue-text-gradient" },
-  //     { name: "ai", color: "green-text-gradient" },
-  //     { name: "mongodb", color: "pink-text-gradient" },
-  //   ],
-  //   image: "/springboot.png",
-  //   source_code_link: "https://github.com/Reddisekharyadav/AI-Shopping-E-Commerce-Application",
-  // },
   {
     name: "ParkPlaze - Smart Parking Platform",
     description:
@@ -506,6 +489,96 @@ const projects = [
     ],
     image: "/ser.png",
     source_code_link: "https://github.com/Reddisekharyadav/wristband-iot-health-monitor",
+  },
+  // === Projects with newly generated images (last) ===
+  {
+    name: "Allo — Reservations & Inventory",
+    description:
+      "Reservation-first inventory system supporting multiple warehouses. Built with Next.js, Prisma and PostgreSQL, featuring row-level locking, atomic reservations, and cron-based auto-release of expired holds.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "prisma", color: "green-text-gradient" },
+      { name: "postgresql", color: "pink-text-gradient" },
+    ],
+    image: "/allo_reservations.jpg",
+    source_code_link: "https://github.com/Reddisekharyadav/Allo-reservations-inventory",
+    live_url: "https://allo-reservations-inventory.vercel.app/",
+  },
+  {
+    name: "AI Smart Glasses Companion",
+    description:
+      "Companion app for AI-powered smart glasses that help users navigate the world. The glasses capture photos, process voice commands, and describe scenes through spoken audio — orchestrated by a React Native app over BLE with a Python/FastAPI backend.",
+    tags: [
+      { name: "react-native", color: "blue-text-gradient" },
+      { name: "fastapi", color: "green-text-gradient" },
+      { name: "ai", color: "pink-text-gradient" },
+    ],
+    image: "/ai_smart_glasses.jpg",
+    source_code_link: "https://github.com/Reddisekharyadav/AI-powered-smart-glasses",
+    live_url: "https://ai-powered-smart-glasses.vercel.app/",
+  },
+  {
+    name: "Meeseva Services Fullstack App",
+    description:
+      "Production-ready full-stack application for managing a multi-branch local service business. Built with Next.js, TypeScript, Azure SQL Database, and Azure Blob Storage.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "azure", color: "green-text-gradient" },
+      { name: "typescript", color: "pink-text-gradient" },
+    ],
+    image: "/meeseva_services.jpg",
+    source_code_link: "https://github.com/Reddisekharyadav/meesevaservices-Fullstack-Application",
+    live_url: "https://sevacenter-app.azurewebsites.net/",
+  },
+  {
+    name: "HR Workflow Designer",
+    description:
+      "Mini-HR Workflow Designer module where an HR admin can visually create and test internal workflows such as onboarding, leave approval, and document verification.",
+    tags: [
+      { name: "typescript", color: "blue-text-gradient" },
+      { name: "workflow", color: "green-text-gradient" },
+      { name: "ui-design", color: "pink-text-gradient" },
+    ],
+    image: "/hr_workflow.jpg",
+    source_code_link: "https://github.com/Reddisekharyadav/HR-Workflow-Designer-Module-peototype",
+    live_url: "https://hr-workflow-designer-module-peototy.vercel.app/",
+  },
+  {
+    name: "LifeVault-AI",
+    description:
+      "A privacy-first AI memory operating system combining journaling, voice notes, photos, videos, memory search, mood tracking, timelines, and AI-powered life insights.",
+    tags: [
+      { name: "kotlin", color: "blue-text-gradient" },
+      { name: "android", color: "green-text-gradient" },
+      { name: "ai", color: "pink-text-gradient" },
+    ],
+    image: "/lifevault_ai.jpg",
+    source_code_link: "https://github.com/Reddisekharyadav/LifeVault-AI-Your-Life.-Your-Memories.-Forever-",
+  },
+  {
+    name: "Rural Healthcare Multilingual Chatbot",
+    description:
+      "AI-powered platform for rural healthcare featuring a multilingual chatbot, health data analytics, disease prediction, and integration with government APIs to improve healthcare accessibility across linguistic regions.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "nlp", color: "green-text-gradient" },
+      { name: "healthcare", color: "pink-text-gradient" },
+    ],
+    image: "/rural_healthcare.jpg",
+    source_code_link: "https://github.com/Reddisekharyadav/Rural-Healthcare-Multilingual-Chatbot-Platform",
+  },
+  {
+    name: "Company Dairy — Internship Tracker",
+    description:
+      "Personal local activity tracker and report generator for internship work, with a tracker CLI and local dashboard for daily logs and reporting.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "dashboard", color: "green-text-gradient" },
+      { name: "productivity", color: "pink-text-gradient" },
+    ],
+    image: "/company_dairy.jpg",
+    source_code_link: "https://github.com/Reddisekharyadav/company-dairy",
+    live_url: "https://reddisekharyadav.github.io/company-dairy/",
   },
 ];
 

@@ -86,3 +86,26 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
     },
   };
 };
+
+export const letterContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.035, delayChildren: 0.15 },
+  },
+};
+
+export const letterItem = {
+  hidden: { y: 28, opacity: 0, rotateX: 40 },
+  show: {
+    y: 0,
+    opacity: 1,
+    rotateX: 0,
+    transition: { type: "spring", stiffness: 380, damping: 24 },
+  },
+};
+
+export const cardHover = {
+  rest: { y: 0 },
+  hover: { y: -8, transition: { type: "spring", stiffness: 320, damping: 20 } },
+};

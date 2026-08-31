@@ -8,15 +8,38 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Outfit", "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
-  cursor: none; /* Hide default cursor */
 }
 
-/* Show normal cursor on interactive elements */
-a, button, input, textarea, select, [role="button"], .cursor-pointer {
-  cursor: pointer !important;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050816;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-display {
+  font-family: "Syne", "Outfit", sans-serif;
+}
+
+/* Custom cursor only on fine pointers */
+@media (pointer: fine) {
+  body, body * {
+    cursor: none;
+  }
+  a, button, input, textarea, select, [role="button"], .cursor-pointer {
+    cursor: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .custom-cursor-root {
+    display: none !important;
+  }
 }
 
 /* Smooth scroll for entire document */
@@ -320,3 +343,257 @@ html {
 .animate-pulse-glow {
   animation: pulse-glow 2s infinite;
 }
+
+::selection {
+  background: rgba(0, 217, 255, 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00d9ff, #39ff14);
+  border-radius: 999px;
+  border: 2px solid #050816;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00d9ff, #39ff14, #a480ff, #00d9ff);
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 6s ease infinite;
+}
+
+.glass-panel {
+  background: rgba(13, 27, 42, 0.62);
+  border: 1px solid rgba(0, 217, 255, 0.16);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+
+.btn-shine:hover::after {
+  animation: shine 0.85s ease;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00d9ff, #39ff14);
+  transition: width 0.28s ease;
+  border-radius: 999px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.input-glow:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.7), 0 0 24px rgba(0, 217, 255, 0.18);
+}
+
+.vertical-timeline::before {
+  background: linear-gradient(180deg, #00d9ff, #39ff14) !important;
+  width: 3px !important;
+}
+
+.vertical-timeline-element-content {
+  border: 1px solid rgba(0, 217, 255, 0.14) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 18px !important;
+}
+
+.vertical-timeline-element-date {
+  color: #64ffda !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.page-noise {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes loader-bar {
+  0% { width: 8%; }
+  70% { width: 86%; }
+  100% { width: 100%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 3D Section Divider Animations */
+@keyframes orb-drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.35;
+  }
+  25% {
+    transform: translate(30px, -20px) scale(1.1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(-15px, 15px) scale(0.95);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translate(20px, 10px) scale(1.05);
+    opacity: 0.4;
+  }
+}
+
+.animate-orb-drift {
+  animation: orb-drift 12s ease-in-out infinite;
+}
+
+/* Shine sweep animation */
+@keyframes shine {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(120%); }
+}
+
+/* Gradient shift for text */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* 3D Card hover glow */
+@keyframes card-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.1),
+                0 0 30px rgba(0, 217, 255, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.15),
+                0 0 50px rgba(57, 255, 20, 0.08);
+  }
+}
+
+/* Holographic scanning line */
+@keyframes holo-scan {
+  0% { top: -5%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 105%; opacity: 0; }
+}
+
+/* Section reveal with 3D perspective */
+@keyframes section-reveal-3d {
+  from {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(8deg) translateY(60px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-section-reveal {
+  animation: section-reveal-3d 0.8s ease-out forwards;
+}
+
+/* Pulsing dot animation */
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(57, 255, 20, 0.7);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 8px rgba(57, 255, 20, 0);
+  }
+}
+
+/* Floating tag animation */
+@keyframes float-tag {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Canvas glow effect */
+.canvas-glow {
+  filter: drop-shadow(0 0 30px rgba(0, 217, 255, 0.15));
+}
+
+/* 3D perspective container */
+.perspective-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* Smooth 3D card transitions */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d:hover {
+  transform: translateZ(20px) rotateX(2deg) rotateY(-2deg);
+}
+
+/* Neon text effect */
+.neon-text {
+  text-shadow:
+    0 0 7px rgba(0, 217, 255, 0.6),
+    0 0 42px rgba(0, 217, 255, 0.3),
+    0 0 82px rgba(0, 217, 255, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

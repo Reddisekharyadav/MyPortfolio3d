@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import GlitchText from './GlitchText';
+import GlitchText from "./GlitchText";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -18,7 +18,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -29,7 +29,6 @@ const Contact = () => {
       [name]: value,
     });
 
-    // Clear error for this field when user starts typing
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -95,117 +94,111 @@ const Contact = () => {
             email: "",
             message: "",
           });
-          
-          // Clear success message after 5 seconds
           setTimeout(() => setSubmitStatus(null), 5000);
         },
         (error) => {
           setLoading(false);
           setSubmitStatus("error");
           console.error(error);
-          
-          // Clear error message after 5 seconds
           setTimeout(() => setSubmitStatus(null), 5000);
         }
       );
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className="flex-[0.75] glass-panel p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={styles.sectionHeadText}>
+          <GlitchText>Contact.</GlitchText>
+        </h3>
 
         {submitStatus === "success" && (
-          <div className='mt-4 p-4 bg-green-500/20 border border-green-500 rounded-lg'>
-            <p className='text-green-500 font-medium'>
-              ✓ Thank you! I will get back to you as soon as possible.
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-4 p-4 bg-green-500/20 border border-green-500 rounded-lg"
+          >
+            <p className="text-green-500 font-medium">
+              Thank you! I will get back to you as soon as possible.
             </p>
-          </div>
+          </motion.div>
         )}
 
         {submitStatus === "error" && (
-          <div className='mt-4 p-4 bg-red-500/20 border border-red-500 rounded-lg'>
-            <p className='text-red-500 font-medium'>
-              ✗ Oops! Something went wrong. Please try again.
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-4 p-4 bg-red-500/20 border border-red-500 rounded-lg"
+          >
+            <p className="text-red-500 font-medium">
+              Oops! Something went wrong. Please try again.
             </p>
-          </div>
+          </motion.div>
         )}
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+        <form ref={formRef} onSubmit={handleSubmit} className="mt-10 flex flex-col gap-7">
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-3">Your Name</span>
             <input
-              type='text'
-              name='name'
+              type="text"
+              name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
-              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
-                errors.name ? 'border-2 border-red-500' : ''
+              placeholder="What's your name?"
+              className={`input-glow bg-tertiary py-4 px-6 placeholder:text-white/35 text-white rounded-xl outline-none border border-white/10 font-medium transition-all ${
+                errors.name ? "border-2 border-red-500" : ""
               }`}
             />
-            {errors.name && (
-              <span className='text-red-500 text-sm mt-2'>{errors.name}</span>
-            )}
+            {errors.name && <span className="text-red-500 text-sm mt-2">{errors.name}</span>}
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-3">Your email</span>
             <input
-              type='email'
-              name='email'
+              type="email"
+              name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
-              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
-                errors.email ? 'border-2 border-red-500' : ''
+              placeholder="What's your email?"
+              className={`input-glow bg-tertiary py-4 px-6 placeholder:text-white/35 text-white rounded-xl outline-none border border-white/10 font-medium transition-all ${
+                errors.email ? "border-2 border-red-500" : ""
               }`}
             />
-            {errors.email && (
-              <span className='text-red-500 text-sm mt-2'>{errors.email}</span>
-            )}
+            {errors.email && <span className="text-red-500 text-sm mt-2">{errors.email}</span>}
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-3">Your Message</span>
             <textarea
               rows={7}
-              name='message'
+              name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
-              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
-                errors.message ? 'border-2 border-red-500' : ''
+              placeholder="What do you want to say?"
+              className={`input-glow bg-tertiary py-4 px-6 placeholder:text-white/35 text-white rounded-xl outline-none border border-white/10 font-medium transition-all resize-none ${
+                errors.message ? "border-2 border-red-500" : ""
               }`}
             />
-            {errors.message && (
-              <span className='text-red-500 text-sm mt-2'>{errors.message}</span>
-            )}
+            {errors.message && <span className="text-red-500 text-sm mt-2">{errors.message}</span>}
           </label>
 
           <button
-            type='submit'
+            type="submit"
             disabled={loading}
-            className={`bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary ${
-              loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-tertiary/80 transition-all'
+            className={`btn-shine bg-gradient-to-r from-[#00d9ff] to-[#39ff14] py-3 px-8 rounded-full outline-none w-fit text-black font-bold shadow-md ${
+              loading ? "opacity-50 cursor-not-allowed" : "hover:scale-105 transition-transform"
             }`}
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </motion.div>
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
       </motion.div>

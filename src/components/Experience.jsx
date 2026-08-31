@@ -3,7 +3,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import GlitchText from './GlitchText';
+import GlitchText from "./GlitchText";
 import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
@@ -17,41 +17,38 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "rgba(29, 24, 54, 0.82)",
         color: "#fff",
-        boxShadow: "0 3px 20px rgba(0, 217, 255, 0.2)",
+        boxShadow: "0 12px 40px rgba(0, 217, 255, 0.12)",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: experience.iconBg, boxShadow: "0 0 0 4px #00d9ff33" }}
       icon={
-        <motion.div 
-          className='flex justify-center items-center w-full h-full'
-          whileHover={{ 
-            scale: 1.2,
+        <motion.div
+          className="flex justify-center items-center w-full h-full"
+          whileHover={{
+            scale: 1.15,
             rotate: 360,
-            transition: { duration: 0.5 }
+            transition: { duration: 0.5 },
           }}
         >
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className='w-[60%] h-[60%] object-contain'
+            className="w-[60%] h-[60%] object-contain"
           />
         </motion.div>
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p
-          className='text-secondary text-[16px] font-semibold'
-          style={{ margin: 0 }}
-        >
+        <h3 className="text-white text-[24px] font-display font-bold">{experience.title}</h3>
+        <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
           {experience.company_name}
         </p>
       </div>
 
-      <ul className='mt-5 list-disc ml-5 space-y-2'>
+      <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <motion.li
             key={`experience-point-${index}`}
@@ -59,7 +56,7 @@ const ExperienceCard = ({ experience }) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
             {point}
           </motion.li>
@@ -72,18 +69,19 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-            <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}><GlitchText className="inline-block">What I have done so far</GlitchText></p>
-        <h2 className={styles.sectionHeadText}><GlitchText className="inline-block">Work Experience.</GlitchText></h2>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>
+          <GlitchText className="inline-block">What I have done so far</GlitchText>
+        </p>
+        <h2 className={styles.sectionHeadText}>
+          <GlitchText className="inline-block">Work Experience.</GlitchText>
+        </h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
+      <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
+            <ExperienceCard key={`experience-${index}`} experience={experience} />
           ))}
         </VerticalTimeline>
       </div>

@@ -22,8 +22,32 @@ module.exports = {
       screens: {
         xs: "450px",
       },
+      fontFamily: {
+        sans: ["Outfit", "Poppins", "sans-serif"],
+        display: ["Syne", "Outfit", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+      },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
+      },
+      keyframes: {
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        shine: {
+          "0%": { transform: "translateX(-120%)" },
+          "100%": { transform: "translateX(220%)" },
+        },
+        "orb-drift": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(40px, -30px) scale(1.08)" },
+        },
+      },
+      animation: {
+        "gradient-shift": "gradient-shift 6s ease infinite",
+        shine: "shine 1.4s ease-in-out infinite",
+        "orb-drift": "orb-drift 14s ease-in-out infinite",
       },
     },
   },
