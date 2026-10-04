@@ -104,6 +104,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Marugani Reddi Sekhar",
           from_email: form.email,
+          reply_to: form.email,
           to_email: contactEmail,
           subject: form.subject || "Portfolio Contact Inquiry",
           message: form.message,
